@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const typewriterText = document.querySelector("#typewriter-text");
     const phrases = [
-        " Coder ",
+        " Frontend-Developer ",
         " Designer ",
     ];
     let phraseIndex = 0;
