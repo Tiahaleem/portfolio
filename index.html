@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="images/20240719_121608.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Tia Haleem Portfolio</title>
+    <link rel="stylesheet" href="css/portfolio.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/services.css" />
+    <link rel="stylesheet" href="css/skills.css" />
+    <link rel="stylesheet" href="css/project.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="pop-up.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script> -->
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "Rgn7Diwvj42tahJGg",
+      });
+   })();
+</script>
+  </head>
+
+  <body>
+    <header class="header">
+  <a href="#" class="logo">Tia Haleem</a>
+
+  <!-- Toggle Button -->
+  <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">☰</div>
+
+  <!-- Navigation Menu -->
+  <nav class="navbar" id="navbar">
+    <a href="#home" class="active" style="--i: 1">Home</a>
+    <a href="#about" style="--i: 2">About</a>
+    <a href="#skills" style="--i: 3">Skills</a>
+    <a href="#projects" style="--i: 4">Projects</a>
+    <a href="#contact" style="--i: 5">Contact</a>
+  </nav>
+</header>
+
+
+    <section class="home">
+      <div class="home-wrapper">
+        <!-- Text Content -->
+        <div class="home-content">
+          <h2>Hello, it's Me</h2>
+          <h1>Coder Tia</h1>
+          <div class="typewriter">
+            I'm a<span id="typewriter-text" class="typewriter-text"></span
+            ><label for=""></label>
+          </div>
+          <p>
+           I’m Tia Haleem, a UI/UX designer and front-end developer focused on creating intuitive, user-centered digital products. I combine thoughtful design with clean, responsive code to bridge the gap between concept and experience. My work is driven by clarity, problem-solving, and a commitment to building interfaces that truly support the people who use them.
+          </p>
+          <div class="home-sci">
+            <!-- <a href="https://github.com/CoderMuzan" style="--i: 7"
+              ><i class="fa-brands fa-github"></i
+            ></a> -->
+            <!-- <a href="https://www.facebook.com/danielagunbia24" style="--i: 8"
+              ><i class="fa-brands fa-facebook"></i
+            ></a> -->
+            <!-- <a href="https://www.tiktok.com/@danie.dna" style="--i: 9"
+              ><i class="fa-brands fa-tiktok"></i
+            ></a> -->
+            <!-- <a
+              href="https://www.snapchat.com/add/danielagunbia24"
+              style="--i: 10"
+              ><i class="fa-brands fa-snapchat"></i
+            ></a> -->
+            <!-- <a href="https://wa.me/2348136828054" style="--i: 11"
+              ><i class="fa-brands fa-whatsapp"></i
+            ></a> -->
+          </div>
+          <a href="#contact" class="btn-box">More about me</a>
+        </div>
+
+        <!-- Image Section -->
+        <div class="home-img">
+          <img src="images/WhatsApp Image 2025-11-20 at 20.34.05_6fd00a96.jpg" alt="Tia's profile image" />
+        </div>
+      </div>
+
+      <span class="home-imgHover"></span>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about-img">
+        <img src="./images/WhatsApp Image 2025-11-20 at 20.34.05_9cb86d70.jpg" alt="" />
+      </div>
+      <div class="about-text">
+        <h2>About <span>Me</span></h2>
+        <h4>Creating vesarlity in Motion</h4>
+        <p>
+          II’m a multi-disciplinary creator with a passion for designing, building, and improving digital experiences.
+As a UI/UX Designer, I craft interfaces that feel intuitive, meaningful, and visually balanced.
+As a Front-End Developer, I bring those ideas to life through clean HTML, responsive CSS, and interactive JavaScript.
+With Git and GitHub, I keep my workflow organized, collaborative, and constantly evolving.
+
+Every skill I’ve developed contributes to a larger vision—one rooted in creativity, problem-solving, and the drive to make digital spaces feel effortless and engaging.
+        </p>
+        <a href="#contact" class="btn-box">More about me</a>
+      </div>
+    </section>
+
+    <section id="skills">
+      <!-- Technical Skills -->
+      <div class="container1">
+        <h1 class="heading1">Best Of My Skills</h1>
+        <div class="technical-bars">
+          <div class="bar">
+            <i style="color: #c95d2e" class="fa-brands fa-html5"></i>
+            <div class="info"><span>HTML</span></div>
+            <div class="progress-line html"><span></span></div>
+          </div>
+
+          <div class="bar">
+            <i style="color: #69bcbc" class="fa-brands fa-css3"></i>
+            <div class="info"><span>CSS</span></div>
+            <div class="progress-line react"><span></span></div>
+          </div>
+
+          <div class="bar">
+            <i style="color: #f7df1e" class="fa-brands fa-square-js"></i>
+            <div class="info"><span>JavaScript</span></div>
+            <div class="progress-line java"><span></span></div>
+          </div>
+
+           <div class="bar">
+            <i style="color: #f7df1e" class="fa-brands fa-square-github"></i>
+            <div class="info"><span>GitHub</span></div>
+            <div class="progress-line github"><span></span></div>
+          </div>
+
+          <div class="bar">
+            <i style="color: #f7df1e" class="fa-brands fa-square-UiUx"></i>
+            <div class="info"><span>UiUx</span></div>
+            <div class="progress-line Uiux"><span></span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Professional Skills -->
+      <div class="container1">
+        <h1 class="heading1">Professional Skills</h1>
+        <div class="radial-bars">
+          <div class="radial-bar">
+            <svg viewBox="0 0 200 200">
+              <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+              <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+            </svg>
+            <div class="percentage">70%</div>
+            <div class="text">Creativity</div>
+          </div>
+
+          <div class="radial-bar">
+            <svg viewBox="0 0 200 200">
+              <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+              <circle class="path path-2" cx="100" cy="100" r="80"></circle>
+            </svg>
+            <div class="percentage">70%</div>
+            <div class="text">Assistance</div>
+          </div>
+
+          <div class="radial-bar">
+            <svg viewBox="0 0 200 200">
+              <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+              <circle class="path path-3" cx="100" cy="100" r="80"></circle>
+            </svg>
+            <div class="percentage">65%</div>
+            <div class="text">Problem Solving</div>
+          </div>
+
+          <div class="radial-bar">
+            <svg viewBox="0 0 200 200">
+              <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+              <circle class="path path-4" cx="100" cy="100" r="80"></circle>
+            </svg>
+            <div class="percentage">90%</div>
+            <div class="text">Teamwork</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio">
+      <div class="main-text">
+        <h2>Latest <span>Project</span></h2>
+
+        <div class="portfolio-content">
+          <div class="project-card">
+            <img
+              src="images/Screenshot 2025-11-20 213949.jpg"
+              alt="Leemtech img"
+            />
+            <div class="layer">
+              <h5>Leemtech Polysteren Products</h5>
+              <p>
+               Leemtech provides high-quality polystyrene products and building solutions that combine efficiency, sustainability, and innovation for construction projects of all sizes.
+              </p>
+              <a
+                href="https://tiahaleem.github.io/Leemtech/index.html#home"
+                ><i class="fa fa-external-link"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <img src="images/health.jpg" alt="Health Ai" />
+            <div class="layer">
+              <h5>Health Ai</h5>
+              <p>
+               Advanced symptom analysis powered by machine learning. Describe your symptoms using text or voice, and receive instant health insights with preventive care recommendations.
+              </p>
+              <a href="https://github.com/Tiahaleem/health"><i class="fa fa-external-link"></i></a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <img
+              src="images/Screenshot (115).png"
+              alt="IKO/ICO Crypto Project"
+            />
+            <div class="layer">
+              <h5>IKO/ICO Crypto</h5>
+              <p>
+                A comprehensive platform for Initial Coin Offerings (ICO) and
+                Initial Koin Offerings (IKO), providing tools for token
+                launches, investor dashboards, and secure blockchain
+                integration.
+              </p>
+              <a
+                href="https://preview.themeforest.net/item/iko-ico-crypto-landing-page-template/full_screen_preview/50950377"
+                ><i class="fa fa-external-link"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="contact-text">
+        <h2>Contact <span>Me</span></h2>
+        <h4>Let’s Collaborate</h4>
+        <p>
+          Have a project idea, a question, or just want to connect? I’m always
+          open to new opportunities and meaningful collaborations. Whether
+          you're building something from scratch or refining an existing
+          concept, I’d love to help bring your vision to life. Drop me a message
+          and let’s create something impactful together.
+        </p>
+
+        <ul class="contact-list">
+          <li>
+            <i class="fa-solid fa-paper-plane"></i> tiamiyuhaleem@gmail.com
+          </li>
+          <li><i class="fa-brands fa-whatsapp"></i> 08136828054</li>
+        </ul>
+
+        <!-- <div class="contact-icons">
+          <a href="https://www.facebook.com/danielagunbia24"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="https://wa.me/2349169638677"
+            ><i class="fa-brands fa-whatsapp"></i
+          ></a>
+          <a href="https://www.snapchat.com/add/danielagunbia24"
+            ><i class="fa-brands fa-snapchat"></i
+          ></a>
+          <a href="https://www.tiktok.com/@danie.dna"
+            ><i class="fa-brands fa-tiktok"></i
+          ></a>
+          <a href="https://x.com/@madih_raya29270"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+        </div> -->
+      </div>
+
+      <div class="contact-form">
+       <form id="contact-form" onsubmit="sendMail(event)">
+  <input id="name" type="text" placeholder="Enter Your Name" />
+  <input id="email" type="email" placeholder="Enter Your Email" required />
+  <input id="subject" type="text" placeholder="Enter Your Subject" />
+  <textarea id="message" rows="10" placeholder="Enter Your Message" required></textarea>
+  <input type="submit" value="Submit" class="send" />
+</form>
+</div>
+</section>
+
+<!-- Popup Notification -->
+<div id="popup" class="popup">
+  <p id="popup-message"></p>
+</div>
+<!-- Popup Notification -->
+<div id="popup" class="popup">
+  <p id="popup-message"></p>
+</div>
+
+    <footer>
+      <div class="scrolling-time">
+        <div class="text">
+          <span
+            >Created by <a href="#">Tia</a> &#169; 2025 All Rights
+            Reserved</span
+          >
+          <p id="footer-time"></p>
+        </div>
+      </div>
+    </footer>
+
+    <a href="#" class="top"><i class="fa-solid fa-arrow-up"></i></a>
+
+    <a href="#contact" class="down"><i class="fa-solid fa-arrow-down"></i></a>
+
+    <script src="portfolio.js"></script>
+  </body>
+</html>
