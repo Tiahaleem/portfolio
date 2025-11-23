@@ -1,0 +1,23 @@
+.popup {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #ff4444;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  display: none;
+  animation: fadeIn 0.3s ease;
+  z-index: 9999;
+}
+
+.popup.success { background: #28a745; }
+.popup.error { background: #dc3545; }
+.popup.warning { background: #f0ad4e; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,120 @@
+.services {
+  color: aliceblue;
+  font-size: clamp(1rem, 2.5vw, 1.25rem); /* scales from 16px to 20px */
+  line-height: 1.6;
+  margin-bottom: 4rem;
+}
+
+.sub-title {
+  text-align: center;
+  font-size: clamp(2rem, 6vw, 3.75rem); /* scales from ~32px to 60px */
+  padding-bottom: 4.375rem;
+}
+
+.sub-title span {
+  color: #0ef;
+}
+
+.container {
+  padding: 5.625rem; /* 90px */
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16.1875rem, 1fr)); /* 259px */
+  gap: 2.5rem;
+  margin-top: 3.125rem;
+}
+
+.services-list div {
+  background-color: transparent;
+  padding: 2.5rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  border-radius: 1.25rem;
+  transition: background 0.5s, transform 0.5s;
+  box-shadow: 1px 1px 1.25rem #012290f7, 1px 1px 2.5rem #0053b8f7;
+}
+
+.services-list div:hover {
+  transform: translateY(-10px);
+}
+
+.services-list div i {
+  font-size: 3.125rem;
+  margin-bottom: 1.875rem;
+}
+
+.services-list div h2 {
+  font-size: 1.875rem;
+  font-weight: 500;
+  margin-bottom: 0.9375rem;
+}
+
+.services-list div a {
+  text-decoration: none;
+  color: #000;
+  font-size: 0.75rem;
+  margin-top: 1.25rem;
+  display: inline-block;
+}
+
+.read {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  background: #0ef;
+  border-radius: 2.5rem;
+  font-size: 1rem;
+  color: #081b29;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-weight: 600;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 2s;
+  box-shadow: 0 0 5px #0ef, 0 0 25px #0ef;
+}
+
+.read:hover {
+  box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan,
+              0 0 100px cyan, 0 0 200px cyan;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 2rem 1rem;
+  }
+
+  .sub-title {
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+    padding-bottom: 2rem;
+  }
+
+  .services-list {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .services-list div {
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .services-list div i {
+    font-size: 2.5rem;
+  }
+
+  .services-list div h2 {
+    font-size: 1.5rem;
+  }
+
+  .services-list div a {
+    font-size: 0.875rem;
+  }
+
+  .read {
+    width: 100%;
+    text-align: center;
+    font-size: 0.9375rem;
+  }
+}

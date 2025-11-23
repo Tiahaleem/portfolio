@@ -1,0 +1,169 @@
+/* Main Text Section */
+.main-text {
+  padding-top: 8rem;
+  margin-top: 12.5rem;
+  text-align: center;
+}
+
+.main-text h2 {
+  font-size: clamp(2rem, 5vw, 3.75rem);
+  line-height: 1.2;
+  color: #fff;
+}
+
+.main-text h2 span {
+  color: #0ef;
+}
+
+/* Portfolio Grid */
+.portfolio-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+/* Project Card */
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 400px;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Project Image */
+.project-card img {
+  width: 100%;
+  height: 17rem;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  display: block;
+  z-index: 1;
+  transition: transform 0.5s ease;
+}
+
+/* Hover Layer */
+.layer {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), #0ef);
+  border-radius: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+  z-index: 2;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.project-card:hover .layer {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.layer h5 {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.layer p {
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+/* Clickable Link */
+.layer a {
+  color: #fff;
+  /* background: #ff004f; */
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.layer a:hover {
+  background: #e60045;
+}
+
+.layer i {
+  color: #ff004f;
+  font-size: 1.375rem;
+  background: #fff;
+  width: 3.75rem;
+  height: 3.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  /* margin-top: 1rem; */
+}
+
+.layer i:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .main-text {
+    padding-top: 4rem;
+    margin-top: 6rem;
+  }
+
+  .main-text h2 {
+    font-size: clamp(1.75rem, 6vw, 2.5rem);
+  }
+
+  .portfolio-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 1.25rem;
+  }
+
+  .project-card {
+    max-width: 90%;
+  }
+
+  .project-card img {
+    height: 14rem;
+  }
+
+  .layer h5 {
+    font-size: 1.25rem;
+  }
+
+  .layer p {
+    font-size: 0.9375rem;
+  }
+
+  .layer a {
+    font-size: 0.95rem;
+  }
+
+  .layer i {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.25rem;
+  }
+}
