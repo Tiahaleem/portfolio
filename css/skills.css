@@ -61,10 +61,10 @@ section {
 }
 
 .progress-line.html span { width: 90%; }
-.progress-line.java span { width: 65%; }
-.progress-line.react span { width: 75%; }
-.progress-line.github span {width: 80%;}
-.progress-line.Uiux span{width: 70%;}
+.progress-line.java span { width: 75%; }
+.progress-line.react span { width: 80%; }
+.progress-line.github span {width: 90%;}
+.progress-line.Uiux span{width: 85%;}
 
 .progress-line span::after {
   position: absolute;
@@ -79,10 +79,10 @@ section {
   opacity: 0;
 }
 .progress-line.html span::after { content: "90%"; }
-.progress-line.java span::after { content: "65%"; }
-.progress-line.react span::after { content: "75%"; }
-.progress-line.github span::after {content: "80%";}
-.progress-line.Uiux span::after{content: "70%";}
+.progress-line.java span::after { content: "75%"; }
+.progress-line.react span::after { content: "80%"; }
+.progress-line.github span::after {content: "90%";}
+.progress-line.Uiux span::after{content: "85%";}
 
 
 .progress-line span::before {
