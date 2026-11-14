@@ -1,3 +1,43 @@
+// ---------- Meta Pixel ----------
+// Paste your Pixel ID between the quotes (Meta Events Manager > your Pixel).
+// While it's empty, nothing loads and nothing is tracked.
+// No personal details (names, emails, numbers) are ever sent to Meta.
+const META_PIXEL_ID = "";
+
+(function loadMetaPixel() {
+  if (!META_PIXEL_ID) return;
+  !(function (f, b, e, v, n, t, s) {
+    if (f.fbq) return;
+    n = f.fbq = function () {
+      n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+    };
+    if (!f._fbq) f._fbq = n;
+    n.push = n;
+    n.loaded = true;
+    n.version = "2.0";
+    n.queue = [];
+    t = b.createElement(e);
+    t.async = true;
+    t.src = v;
+    s = b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t, s);
+  })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+  fbq("init", META_PIXEL_ID);
+  fbq("track", "PageView");
+})();
+
+// Safe wrapper: does nothing if the pixel isn't loaded (or is blocked by the visitor).
+function track(type, name, params) {
+  try {
+    if (typeof window.fbq === "function") window.fbq(type, name, params || {});
+  } catch (e) {}
+}
+
+// CTA clicks (every button that jumps to the enquiry form)
+document.querySelectorAll('a[href="#enquiry"]').forEach((a) => {
+  a.addEventListener("click", () => track("trackCustom", "CTAClick", { location: a.textContent.trim() }));
+});
+
 // ---------- Scroll reveal ----------
 const revealEls = document.querySelectorAll(".reveal");
 const revealObserver = new IntersectionObserver(
@@ -118,6 +158,14 @@ function updateServiceFields() {
 
 serviceRadios.forEach((radio) => radio.addEventListener("change", updateServiceFields));
 
+// Fire once, the first time someone starts filling in the form.
+let formStarted = false;
+enquiryForm.addEventListener("input", () => {
+  if (formStarted) return;
+  formStarted = true;
+  track("trackCustom", "FormStart");
+});
+
 enquiryForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
@@ -154,7 +202,10 @@ enquiryForm.addEventListener("submit", (event) => {
   enquiryForm.hidden = true;
   enquirySuccess.hidden = false;
 
+  track("track", "Lead", { content_name: data.service_interest || "enquiry" });
+
   setTimeout(() => {
+    track("track", "Contact", { channel: "whatsapp" });
     window.open(waUrl, "_blank", "noopener");
   }, 900);
 });
