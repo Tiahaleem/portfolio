@@ -2,7 +2,7 @@
 // Paste your Pixel ID between the quotes (Meta Events Manager > your Pixel).
 // While it's empty, nothing loads and nothing is tracked.
 // No personal details (names, emails, numbers) are ever sent to Meta.
-const META_PIXEL_ID = "";
+const META_PIXEL_ID = "1792673318696953";
 
 (function loadMetaPixel() {
   if (!META_PIXEL_ID) return;
