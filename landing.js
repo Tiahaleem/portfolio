@@ -172,7 +172,7 @@ enquiryForm.addEventListener("submit", (event) => {
   const data = Object.fromEntries(new FormData(enquiryForm).entries());
 
   let message =
-    `New project enquiry — Spider Web Design\n\n` +
+    `New project enquiry — Spider Tech\n\n` +
     `Name: ${data.full_name}\n` +
     `Business: ${data.business_name}\n` +
     `Email: ${data.email}\n` +
