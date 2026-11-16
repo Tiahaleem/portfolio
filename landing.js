@@ -33,6 +33,11 @@ function track(type, name, params) {
   } catch (e) {}
 }
 
+// WhatsApp button clicks
+document.querySelectorAll(".wa-link").forEach((a) => {
+  a.addEventListener("click", () => track("track", "Contact", { channel: "whatsapp_button" }));
+});
+
 // CTA clicks (every button that jumps to the enquiry form)
 document.querySelectorAll('a[href="#enquiry"]').forEach((a) => {
   a.addEventListener("click", () => track("trackCustom", "CTAClick", { location: a.textContent.trim() }));
